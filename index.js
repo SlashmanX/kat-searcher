@@ -11,8 +11,6 @@ var getSearchRSS = function(searchString, callback) {
 	var requestURL = KICKASS_URL + 'usearch/' + searchString,
 		deferred = Q.defer();
 
-		console.log(requestURL);
-
 	request(requestURL, function(error, response, body) {
 		if (!error && response.statusCode == 200) {
 			deferred.resolve(body);
